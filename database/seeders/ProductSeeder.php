@@ -25,7 +25,7 @@ class ProductSeeder extends Seeder
 
             $p -> save();
 
-            $categories = Category :: inRandomOrder() -> limit(5) -> get();
+            $categories = Category :: inRandomOrder() -> limit(rand(1, 5)) -> get();
             $p -> categories() -> attach($categories);
         });
 
