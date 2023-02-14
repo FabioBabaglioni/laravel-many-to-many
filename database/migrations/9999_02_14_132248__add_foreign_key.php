@@ -13,7 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        //
+        Schema::table('typologies', function (Blueprint $table) {
+            $table -> foreignId('products_id')
+                   -> constrained();
+        });
     }
 
     /**
@@ -23,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        
     }
 };
