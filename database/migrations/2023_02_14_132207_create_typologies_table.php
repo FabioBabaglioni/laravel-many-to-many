@@ -18,7 +18,7 @@ return new class extends Migration
 
             $table -> string('code', 5) -> unique();
             $table -> string('name', 32);
-            $table -> boolean(true);
+            $table -> boolean('digital');
 
             $table->timestamps();
         });
