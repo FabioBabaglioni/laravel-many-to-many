@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [MainController :: class, 'home'])
     ->name('home');
+
+Route::get('/delete/{product}', [MainController :: class, 'productDelete'])
+    ->name('product.delete');
