@@ -19,7 +19,7 @@ return new class extends Migration
             $table -> string('code', 5) -> unique();
             $table -> string('name', 32);
             $table -> text('description');
-            $table -> integer('number') -> unsigned();
+            $table -> integer('price') -> unsigned();
             $table -> integer('weight') -> unsigned();
 
             $table->timestamps();
