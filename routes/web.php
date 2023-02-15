@@ -19,3 +19,9 @@ Route::get('/', [MainController :: class, 'home'])
 
 Route::get('/delete/{product}', [MainController :: class, 'productDelete'])
     ->name('product.delete');
+
+Route::get('/product/create', [MainController :: class, 'productCreate'])
+    ->name('product.create');
+
+Route::post('/product/create', [MainController :: class, 'productStore'])
+    ->name('product.store');
